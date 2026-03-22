@@ -21,4 +21,59 @@
     </div>
 </div>
 
+<!-- Feature Cards -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold">Top 100</h5>
+                <p class="card-text text-muted">Browse the highest-rated films of all time, ranked and ready for you to explore.</p>
+                <a asp-controller="TopHundred" asp-action="Index" class="btn btn-sm btn-outline-dark mt-2">View Rankings</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold">Browse by Genre</h5>
+                <p class="card-text text-muted">Filter movies by genre — action, drama, comedy, horror, and more.</p>
+                <a asp-controller="Movie" asp-action="Genre" class="btn btn-sm btn-outline-dark mt-2">Explore Genres</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold">Add a Movie</h5>
+                <p class="card-text text-muted">Know a great film that's missing? Submit it to the collection and share it with everyone.</p>
+                <a asp-controller="Movie" asp-action="Create" class="btn btn-sm btn-outline-dark mt-2">Add Movie</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works -->
+<div class="text-center mb-5">
+    <h2 class="fw-bold mb-4">How It Works</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="p-3">
+                <h5 class="fw-bold">1. Browse</h5>
+                <p class="text-muted">Explore the Top 100 list or filter by genre to find your next favorite film.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3">
+                <h5 class="fw-bold">2. Discover</h5>
+                <p class="text-muted">Click any movie to see its full details — rating, genre, release year, and more.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3">
+                <h5 class="fw-bold">3. Contribute</h5>
+                <p class="text-muted">Think a great movie is missing? Add it to the collection for everyone to enjoy.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
