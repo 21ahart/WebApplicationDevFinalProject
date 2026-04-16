@@ -37,7 +37,7 @@ namespace WebApplicationDevFinalProject.Controllers
         // POST: Movie/AddMovie
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddMovie([Bind("Id,Title,Genre,ReleaseYear,Description")] Movie movie)
+        public async Task<IActionResult> AddMovie([Bind("Id,Title,Genre,ReleaseYear,Rating,Description")] Movie movie)
         {
             if (ModelState.IsValid)
             {
