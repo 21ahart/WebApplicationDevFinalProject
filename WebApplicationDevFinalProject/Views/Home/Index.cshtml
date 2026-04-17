@@ -12,10 +12,10 @@
         Browse the Top 100, filter by genre, and keep track of the movies you love.
     </p>
     <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a asp-controller="TopHundred" asp-action="Index" class="btn btn-lg px-4" style="background-color: #e94560; color: white;">
+        <a asp-controller="Top100" asp-action="Index" class="btn btn-lg px-4" style="background-color: #e94560; color: white;">
             Top 100 Movies
         </a>
-        <a asp-controller="Movie" asp-action="Create" class="btn btn-outline-light btn-lg px-4">
+        <a asp-controller="Movie" asp-action="AddMovie" class="btn btn-outline-light btn-lg px-4">
             + Add a Movie
         </a>
     </div>
@@ -28,7 +28,7 @@
             <div class="card-body text-center p-4">
                 <h5 class="card-title fw-bold">Top 100</h5>
                 <p class="card-text text-muted">Browse the highest-rated films of all time, ranked and ready for you to explore.</p>
-                <a asp-controller="TopHundred" asp-action="Index" class="btn btn-sm btn-outline-dark mt-2">View Rankings</a>
+                <a asp-controller="Top100" asp-action="Index" class="btn btn-sm btn-outline-dark mt-2">View Rankings</a>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@
             <div class="card-body text-center p-4">
                 <h5 class="card-title fw-bold">Add a Movie</h5>
                 <p class="card-text text-muted">Know a great film that's missing? Submit it to the collection and share it with everyone.</p>
-                <a asp-controller="Movie" asp-action="Create" class="btn btn-sm btn-outline-dark mt-2">Add Movie</a>
+                <a asp-controller="Movie" asp-action="AddMovie" class="btn btn-sm btn-outline-dark mt-2">Add Movie</a>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
         <div class="col-md-4">
             <div class="p-3">
                 <h5 class="fw-bold">2. Discover</h5>
-                <p class="text-muted">Click any movie to see its full details — rating, genre, release year, and more.</p>
+                <p class="text-muted">Find movies through rating, genre, release year, and more.</p>
             </div>
         </div>
         <div class="col-md-4">

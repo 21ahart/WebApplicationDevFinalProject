@@ -13,6 +13,9 @@ namespace WebApplicationDevFinalProject.Models
         
         public int ReleaseYear { get; set; }
         
+        [Range(0, 10)]
+        public decimal Rating { get; set; }
+        
         public string Description { get; set; } = string.Empty;
     }
 }
