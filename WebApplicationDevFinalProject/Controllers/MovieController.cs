@@ -14,7 +14,6 @@ namespace WebApplicationDevFinalProject.Controllers
             _context = context;
         }
 
-        // GET: Movie/Genre
         public async Task<IActionResult> Genre(string genreStr)
         {
             var movies = from m in _context.Movies
@@ -28,13 +27,11 @@ namespace WebApplicationDevFinalProject.Controllers
             return View(await movies.ToListAsync());
         }
 
-        // GET: Movie/AddMovie
         public IActionResult AddMovie()
         {
             return View();
         }
 
-        // POST: Movie/AddMovie
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddMovie([Bind("Id,Title,Genre,ReleaseYear,Rating,Description")] Movie movie)
@@ -48,7 +45,6 @@ namespace WebApplicationDevFinalProject.Controllers
             return View(movie);
         }
 
-        // GET: Movie/MovieDetails/5
         public async Task<IActionResult> MovieDetails(int? id)
         {
             if (id == null)
@@ -66,7 +62,6 @@ namespace WebApplicationDevFinalProject.Controllers
             return View(movie);
         }
 
-        // POST: Movie/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

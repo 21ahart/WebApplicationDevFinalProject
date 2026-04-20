@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar .nav-link.active {
+  color: #e94560 !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: #c9d1d9 !important;
+}
+
+.ct-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}

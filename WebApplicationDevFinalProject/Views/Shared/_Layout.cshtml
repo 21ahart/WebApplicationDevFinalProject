@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3 ct-header">
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">CineTrack</a>
 
@@ -22,19 +22,22 @@
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "AboutUs" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Top100" asp-action="Index">Top 100</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Top100" ? "active" : "")" asp-area="" asp-controller="Top100" asp-action="Index">Top 100</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Movie" asp-action="Genre">Genre</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Movie" && ViewContext.RouteData.Values["action"]?.ToString() == "Genre" ? "active" : "")" asp-area="" asp-controller="Movie" asp-action="Genre">Genre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Movie" asp-action="AddMovie">Add a Movie</a>
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Movie" && ViewContext.RouteData.Values["action"]?.ToString() == "AddMovie" ? "active" : "")" asp-area="" asp-controller="Movie" asp-action="AddMovie">Add a Movie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Privacy" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +51,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer ct-header" style="color: #adb5bd;">
         <div class="container">
             &copy; 2026 - CineTrack
         </div>
